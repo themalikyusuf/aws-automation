@@ -21,8 +21,8 @@ TIMESTAMP=`date +%F-%H%M`
 S3_BUCKET_PATH="mongodb-backups"
 
 MONGO_DATABASE="DATABASE NAME" # Replace with database name
-S3_BUCKET_NAME="S3 BUCKET NAME" # Replace with bucket name on S3: terminus-mongodb-production
-COLLECTIONS=("foo" "bar") # Add collections from terminus_properties database in the array
+S3_BUCKET_NAME="S3 BUCKET NAME" # Replace with bucket name on S3
+COLLECTIONS=("foo" "bar") # Add collections from database in the array
 
 for i in "${COLLECTIONS[@]}"
 do
