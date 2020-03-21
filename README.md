@@ -1,22 +1,34 @@
-# mongodb-s3-backup
+## mongodb-s3-backup
+A Shell script that backs up MongoDB on AWS EC2 to S3.
 
 ##### Requirements
-  - AWS access and secret keys for the 'mongodb' user. This can be created in the Identity and Access Management(IAM) page on AWS's console. The 'mongodb' user has been given full programmatic access to S3(Where the backup will be store)
- 
-##### Note
-- The required tools for this script(s3cmd and wget) have already been installed on the MongoDB server as part of the CloudFormation script.
+  - AWS access and secret keys with full programmatic access to S3. Get them from  [IAM](https://console.aws.amazon.com/iam).
+
+##### Prerequisites
+Replace the following dummy variables in the `script.sh` file:
+- COLLECTIONS
+- S3_BUCKET_NAME
+- MONGO_DATABASE
+
+Uncomment the chron job and set an appropriate time to carry out the back up.
+
+##### How to use
+From the root directory:
+```
+$ ./mongodb.sh
+```
+
+##### Credit
+[Nagesh Bansal](https://medium.com/@bansalnagesh/backing-up-mongodb-on-aws-ec2-to-s3-b045b5727fd6)
+
+
+
+
+
+****
 - Before running this script, enter the command below to configure `s3cmd` and follow the prompt to input the AWS access/secret keys. Enter **us-east-2** as the region.
 
 ```
 $ s3cmd --configure
 ```
-##### Running The Script:
-
-Before running the script, ensure to have the appropriate variables in the file i.e.
-- COLLECTIONS
-- S3_BUCKET_NAME
-- MONGO_DATABASE
-```
-$ ./mongodb.sh
-```
-Also, ensure to set a cron job as described at the end of script.
+****
