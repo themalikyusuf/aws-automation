@@ -42,8 +42,3 @@ do
 
 done
 
-#########
-# Run the cron job command to set up back for 02:00 daily(Note timezones)
-#########
-# 00 02 * * * /mongodb.sh
-
