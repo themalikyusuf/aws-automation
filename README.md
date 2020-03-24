@@ -10,8 +10,6 @@ Replace the following dummy variables in the `script.sh` file:
 - S3_BUCKET_NAME
 - MONGO_DATABASE
 
-Uncomment the chron job and set an appropriate time to carry out the back up.
-
 ##### How to use
 From the root directory:
 ```
