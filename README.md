@@ -13,7 +13,7 @@ Replace the following dummy variables in the `script.sh` file:
 ##### How to use
 From the root directory:
 ```
-$ ./mongodb.sh
+$ ./script.sh
 ```
 
 ##### Credit
