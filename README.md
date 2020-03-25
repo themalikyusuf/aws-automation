@@ -2,7 +2,7 @@
 A Shell script that backs up MongoDB on AWS EC2 to S3.
 
 ##### Requirements
-  - AWS access and secret keys with full programmatic access to S3. Get them from  [IAM](https://console.aws.amazon.com/iam).
+  - AWS access and secret keys with full programmatic access to S3. Get them from [IAM](https://console.aws.amazon.com/iam).
 
 ##### Prerequisites
 Replace the following dummy variables in the `script.sh` file:
@@ -18,15 +18,3 @@ $ ./mongodb.sh
 
 ##### Credit
 [Nagesh Bansal](https://medium.com/@bansalnagesh/backing-up-mongodb-on-aws-ec2-to-s3-b045b5727fd6)
-
-
-
-
-
-****
-- Before running this script, enter the command below to configure `s3cmd` and follow the prompt to input the AWS access/secret keys. Enter **us-east-2** as the region.
-
-```
-$ s3cmd --configure
-```
-****
