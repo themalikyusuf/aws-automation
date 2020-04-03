@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# aws cli prepreqs
-
-# works for root volume 
+# Temp
 
 aws ec2 stop-instances --instance-ids i-1234567890abcdef0
 
