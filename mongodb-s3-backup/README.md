@@ -1,5 +1,5 @@
 ## mongodb-s3-backup
-A Shell script that backs up MongoDB data on EC2 to S3.
+A Bash script that backs up MongoDB data on EC2 to S3.
 
 #### Requirements
   - AWS access and secret keys with full programmatic access to S3. Get them from [IAM](https://console.aws.amazon.com/iam).
