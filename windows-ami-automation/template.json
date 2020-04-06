@@ -1,12 +1,4 @@
 {
-  "variables": {
-    "admin_password": "aatEpmFEU4",
-    "aws_access_key": "AKIAIMHYXT4K2WXJLK6Q",
-    "aws_secret_key": "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",
-    "region": "us-west-2",
-    "source_ami": "ami-51fe1729",
-    "version": "1.06.12"
-  },
 
   "builders": [{
     "type": "amazon-ebs",
