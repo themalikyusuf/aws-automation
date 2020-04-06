@@ -1,0 +1,45 @@
+{
+  "variables": {
+    "admin_password": "aatEpmFEU4",
+    "aws_access_key": "AKIAIMHYXT4K2WXJLK6Q",
+    "aws_secret_key": "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",
+    "region": "us-west-2",
+    "source_ami": "ami-51fe1729",
+    "version": "1.06.12"
+  },
+
+  "builders": [{
+    "type": "amazon-ebs",
+    "region": "{{user `region`}}",
+    "source_ami": "{{user `source_ami`}}",
+    "instance_type": "t2.micro",
+    "ami_name": "WIN-AMI {{user `version`}}",
+    "user_data_file": "./provisioners/userdata.ps1",
+    "communicator": "winrm",
+    "winrm_username": "Administrator",
+    "winrm_password": "{{user `admin_password`}}",
+    "winrm_use_ssl": true,
+    "winrm_insecure": true,
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
+    "ami_block_device_mappings": [{
+      "device_name": "/dev/sda1",
+      "volume_size": 100,
+      "delete_on_termination": true,
+      "volume_type": "gp2"
+    }],
+    "launch_block_device_mappings": [{
+      "device_name": "/dev/sda1",
+      "volume_size": 100,
+      "delete_on_termination": true,
+      "volume_type": "gp2"
+    }]
+  }],
+
+  "provisioners": [
+    {
+    "type": "powershell",
+    "scripts": ["./provisioners/provision.ps1"]
+    }
+  ]
+}
