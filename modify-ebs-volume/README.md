@@ -1,5 +1,5 @@
 ## modify-ebs-volume
-This Shell script stops an EC2 instance, takes a snapshot of it's root EBS volume, modifies the size of the EBS volume and restarts the EC2 instance.
+This Bash script stops an EC2 instance, takes a snapshot of it's root EBS volume, modifies the size of the EBS volume and restarts the EC2 instance.
 
 #### Requirements
   - Installation and configuration of [AWS CLI](https://docs.aws.amazon.com/cli/index.html).
