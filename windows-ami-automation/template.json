@@ -6,7 +6,6 @@
     "source_ami": "{{user `source_ami`}}",
     "instance_type": "t2.micro",
     "ami_name": "WIN-AMI {{user `version`}}",
-    "user_data_file": "./provisioners/userdata.ps1",
     "communicator": "winrm",
     "winrm_username": "Administrator",
     "winrm_password": "{{user `admin_password`}}",
