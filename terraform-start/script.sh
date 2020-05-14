@@ -1,16 +1,21 @@
 #!/bin/bash
 
+set -e
+
 # variables
-main="terraform-project/main.tf"
-ignore="terraform-project/.gitignore"
+cloudprovider=$1
+projectdir="terraform-project"
+
+main="$projectdir/main.tf"
+ignore="$projectdir/.gitignore"
 
 # create project directory and files
-mkdir terraform-project
-touch terraform-project/{{main,output,variables}.tf,.gitignore}
+mkdir $projectdir
+touch $projectdir/{{main,output,variables}.tf,.gitignore}
 
 # add contents to project files
 cat <<EOM >$main
-provider "aws" {
+provider "$cloudprovider" {
 	profile = profile
   region  = region
 }
@@ -59,5 +64,7 @@ echo 'project directory and files created'
 
 # check if project file name exists
 
+# initial the project
+# cd $projectdir && terraform init
 
 
