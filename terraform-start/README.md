@@ -1,5 +1,5 @@
 ## terraform-start
-This Bash script create the basic required [Terraform]() project files and initializes the project according to the provider.
+This Bash script creates the basic required [Terraform](https://www.terraform.io) project files and initializes the project according to the provider.
 
 #### Requirements
   - Installation of [Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html).
