@@ -1,13 +1,22 @@
 #!/bin/bash
-
 set -e
 
 # variables
-cloudprovider=$1
 projectdir="terraform-project"
-
 main="$projectdir/main.tf"
 ignore="$projectdir/.gitignore"
+
+echo What provider do you want to initilize Terraform with? [aws, google, azurerm]
+
+read cloudprovider
+
+# check if user entered provider
+if [ -z $cloudprovider ]
+then
+	echo You have not entered a provider. Terraform will be initialized without a provider.
+else
+	echo Creating project directory and initializing Terraform with "$cloudprovider" provider.
+fi
 
 # create project directory and files
 mkdir $projectdir
@@ -59,12 +68,12 @@ terraform.rc
 
 EOM
 
-
-echo 'project directory and files created'
-
-# check if project file name exists
-
 # initial the project
 # cd $projectdir && terraform init
 
+echo Project directory created and Terraform initialized.
+
+# TODO
+# check if project file name exists
+# without enterring provider means not initialize? test initliaze without provider
 
