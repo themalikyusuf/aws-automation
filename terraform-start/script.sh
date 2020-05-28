@@ -6,7 +6,7 @@ projectdir="terraform-project"
 main="$projectdir/main.tf"
 ignore="$projectdir/.gitignore"
 
-echo What provider do you want to initilize Terraform with? [aws, google, azurerm]
+echo What provider do you want to initilize Terraform with? [aws, google, azurerm e.t.c.]
 
 read cloudprovider
 
@@ -69,11 +69,7 @@ terraform.rc
 EOM
 
 # initial the project
-# cd $projectdir && terraform init
+cd $projectdir && terraform init
 
 echo Project directory created and Terraform initialized.
-
-# TODO
-# check if project file name exists
-# without enterring provider means not initialize? test initliaze without provider
 
