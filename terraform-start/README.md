@@ -5,6 +5,7 @@ This Bash script creates the basic required [Terraform](https://www.terraform.io
   - Installation of [Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html).
 
 #### Prerequisites
+Find the appropriate provider name for your project [here](https://www.terraform.io/docs/providers/index.html).
 
 #### How to use
 From the root directory:
