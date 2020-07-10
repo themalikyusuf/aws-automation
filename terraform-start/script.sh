@@ -20,7 +20,7 @@ fi
 
 # create project directory and files
 mkdir $projectdir
-touch $projectdir/{{main,output,variables}.tf,.gitignore}
+touch $projectdir/{{main,output,provider,variables}.tf,.gitignore}
 
 # add contents to project files
 cat <<EOM >$main
